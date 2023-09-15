@@ -1,0 +1,56 @@
+import { LightningElement, track } from 'lwc';
+ 
+export default class lWCExample extends LightningElement {
+ 
+    @track currentContent = '';
+    @track tutorialValue = false;    
+    @track integrationValue = false;
+    @track visualforceValue = false;
+    @track triggerValue = false;
+    @track jqueryJavascriptValue = false;
+    @track salesforceLwcValue = false;
+ 
+ 
+    changeHandleAction(event) {
+        const selected = event.detail.name;        
+ 
+        this.currentContent = selected;
+ 
+        if (selected == 'tutorial'){
+            this.tutorialValue = true;
+        }else{
+            this.tutorialValue = false;
+        }
+ 
+        if (selected == 'integration'){
+            this.integrationValue = true;
+        }else{
+            this.integrationValue = false;
+        }
+ 
+        if (selected == 'visualforce'){
+            this.visualforceValue = true;
+        }else{
+            this.visualforceValue = false;
+        }
+ 
+        if (selected == 'trigger'){
+            this.triggerValue = true;
+        }else{
+            this.triggerValue = false;
+        }
+ 
+        if (selected == 'jqueryJavascript'){
+            this.jqueryJavascriptValue = true;
+        }else{
+            this.jqueryJavascriptValue = false;
+        }
+ 
+        if (selected == 'salesforceLwc'){
+            this.salesforceLwcValue = true;
+        }else{
+            this.salesforceLwcValue = false;
+        }
+ 
+    }
+}
